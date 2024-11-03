@@ -1,0 +1,46 @@
+{
+    "manifest_version": 3,
+    "name": "ESP Monitor Light",
+    "description": "Chrome extension to control the ESP Monitor Light",
+    "version": "1.0",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "permissions": ["background", "storage"],
+    "host_permissions": [
+        "http://*/*"
+      ],
+    "commands":{
+        "toggleSwitch": {
+          "suggested_key": {
+            "default": "Ctrl+Home"
+          },
+          "description": "Turn on/off the light"
+        },
+        "increaseBrightness": {
+          "suggested_key": {
+            "default": "Ctrl+PageUp"
+          },
+          "description": "Increase brightness"
+        },
+        "decreaseBrightness": {
+          "suggested_key": {
+            "default": "Ctrl+PageDown"
+          },
+          "description": "Decrease brightness"
+        },
+        "increaseColorTemp": {
+          "suggested_key": {
+            "default": "Ctrl+PageUp"
+          },
+          "description": "Increase color temperature"
+        },
+        "decreaseColorTemp": {
+          "description": "Decrease color temperature"
+        }
+    }
+  }
